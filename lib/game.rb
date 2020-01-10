@@ -65,15 +65,17 @@ class Game
     else
       turn
     end
-    return
+    play
   end
 
   def play
-    if draw?
-      puts "Cat's Game!"
-    elsif won?
-      puts "Congratulations #{winner}!"
-    elsif !over?
+    if !over?
+      if draw?
+        puts "Cat's Game!"
+      elsif won?
+        puts "Congratulations #{winner}!"
+      end
+    else
       turn
     end
   end

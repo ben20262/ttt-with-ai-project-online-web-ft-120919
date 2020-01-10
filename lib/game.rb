@@ -69,6 +69,7 @@ class Game
   end
 
   def play
+    turn
     if over?
       if draw?
         puts "Cat's Game!"
@@ -76,7 +77,7 @@ class Game
         puts "Congratulations #{winner}!"
       end
     else
-      turn
+      play
     end
   end
 end

@@ -69,7 +69,7 @@ class Game
   end
 
   def play
-    if !over?
+    if over?
       if draw?
         puts "Cat's Game!"
       elsif won?

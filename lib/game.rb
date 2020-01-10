@@ -65,7 +65,7 @@ class Game
     else
       turn
     end
-    play
+    return
   end
 
   def play

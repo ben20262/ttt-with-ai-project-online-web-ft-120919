@@ -62,22 +62,21 @@ class Game
     count = 0
     if board.valid_move?(input)
       board.update(input, current_player)
-    elsif count < 3
-      count += 1
+    else
       turn
     end
     play
   end
 
   def play
-    if over?
+    if !over?
+      turn
+    else
       if draw?
         puts "Cat's Game!"
       elsif won?
         puts "Congratulations #{winner}!"
       end
-    else
-      turn
     end
   end
 end

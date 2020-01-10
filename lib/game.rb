@@ -73,8 +73,10 @@ class Game
     if over?
       if draw?
         puts "Cat's Game!"
+        return
       elsif won?
         puts "Congratulations #{winner}!"
+        return
       end
     else
       play

@@ -59,9 +59,11 @@ class Game
 
   def turn
     input = current_player.move(board)
+    count = 0
     if board.valid_move?(input)
       board.update(input, current_player)
-    else
+    elsif count < 3
+      count += 1
       turn
     end
     play
